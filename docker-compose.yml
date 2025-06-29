@@ -1,18 +1,18 @@
-version: '3.8'
-
 services:
   minecraft:
     build: .
-    container_name: dahole-purpur
+    container_name: dahole-purpur-desert
     restart: unless-stopped
     environment:
       - EULA=true
     ports:
-      - "25565:25565"
-      - "24454:24454/udp"
+      - "3403:25565"
+      - "3402:3402/udp"
+      - "3404:3404"
     volumes:
       - ./:/opt/minecraft/server
       - ./data:/data
     tty: true
     stdin_open: true
-    mem_limit: 5G
+    mem_limit: 12.5G
+

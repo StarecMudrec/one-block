@@ -1,0 +1,51 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {
+                  "translate": "obs.item.last_requirement",
+                  "fallback": "Please stay in my overworld",
+                  "italic": false
+                },
+                "minecraft:lore": [
+					  {
+					  "translate": "obs.item.last_requirement.lore",
+					  "fallback": "-The Visitor would like to stay in your overworld",
+					  "color": "gray",
+					  "italic": false
+					}
+                ],
+                "minecraft:custom_data": {
+					"visitor_requirement":1
+				}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
